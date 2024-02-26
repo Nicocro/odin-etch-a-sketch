@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container"></div>
+
+
+<script>
+    
+    // select the grid container div
+    const gridContainer = document.querySelector('.grid-container');
+
+    // create 16 rows of row-containers 
+    for (let i=0; i<=15; i++) {
+        const divRows = document.createElement('div');
+        divRows.className = "row-container";
+        gridContainer.appendChild(divRows);
+    }
+
+    const rowContainersNodes = document.querySelectorAll('.row-container');
+
+    rowContainersNodes.forEach((rowContainer) => {
+        // Create 16 squares for each row-container
+        for (let j = 0; j < 16; j++) {
+            const square = document.createElement('div');
+            square.className = "square";
+            // Append each square to the current row-container
+            rowContainer.appendChild(square);
+        }
+    });
+
+</script>
+
+</body>
+</html>
