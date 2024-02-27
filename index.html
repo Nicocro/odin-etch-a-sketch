@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- <button>Enter grid size</button> -->
     <div class="grid-container"></div>
 
 
@@ -16,7 +17,7 @@
     const gridContainer = document.querySelector('.grid-container');
 
     // create 16 rows of row-containers 
-    for (let i=0; i<=15; i++) {
+    for (let i=0; i < 16; i++) {
         const divRows = document.createElement('div');
         divRows.className = "row-container";
         gridContainer.appendChild(divRows);
@@ -31,8 +32,16 @@
             square.className = "square";
             // Append each square to the current row-container
             rowContainer.appendChild(square);
+            square.addEventListener('mouseover', () => {
+                square.style.backgroundColor = 'beige';
+                })
         }
     });
+
+    
+    
+
+    
 
 </script>
 
