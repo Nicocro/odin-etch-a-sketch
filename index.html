@@ -19,12 +19,15 @@
         while (size > 100) {
             size = prompt("enter size of grid (less than 100)");
         }
+        const gridContainer = document.querySelector('.grid-container');
+        gridContainer.innerHTML = '';
         createGrid(size);
     })
     
 
     // function to create the grid of squares 
     function createGrid(gridSize) {
+
         const gridContainer = document.querySelector('.grid-container');
         
         for (let i=0; i < gridSize; i++) {
@@ -43,7 +46,7 @@
                 // Append each square to the current row-container
                 rowContainer.appendChild(square);
                 square.addEventListener('mouseover', () => {
-                    square.style.backgroundColor = 'beige';
+                    square.style.backgroundColor = 'blue';
                     });
             }
         });        
