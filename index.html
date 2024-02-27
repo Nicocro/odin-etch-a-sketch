@@ -15,7 +15,10 @@
 
     const btn = document.querySelector('button');
     btn.addEventListener('click', () => {
-        size = prompt("enter size of grid");
+        let size = 101
+        while (size > 100) {
+            size = prompt("enter size of grid (less than 100)");
+        }
         createGrid(size);
     })
     
