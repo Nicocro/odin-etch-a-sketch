@@ -17,7 +17,7 @@
     btn.addEventListener('click', () => {
         let size = 101
         while (size > 100) {
-            size = prompt("enter size of grid (less than 100)");
+            size = parseInt(prompt("enter size of grid (less than 100)"));
         }
         const gridContainer = document.querySelector('.grid-container');
         gridContainer.innerHTML = '';
@@ -43,6 +43,8 @@
             for (let j = 0; j < gridSize; j++) {
                 const square = document.createElement('div');
                 square.className = "square";
+                square.style.height = `${500 / gridSize}px`;
+                square.style.flexBasis = `${500 / gridSize}px`;
                 // Append each square to the current row-container
                 rowContainer.appendChild(square);
                 square.addEventListener('mouseover', () => {

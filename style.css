@@ -1,9 +1,9 @@
 .grid-container {
     display: flex;
     flex-direction: column;
-    width: 960px;
-    height: 960px;
-    /* justify-content: center; */
+    max-width: 500px;
+    max-height: 500px;
+    justify-content: center;
 }
 
 .row-container {
@@ -14,6 +14,4 @@
 .square {
     border-radius: 2px;
     border-color: black;
-    flex-basis: 50px; 
-    height: 50px;
 }
